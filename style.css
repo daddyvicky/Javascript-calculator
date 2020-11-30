@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*,*::before,*::after{
+     box-sizing: border-box;
+     font-family: 'Ubuntu', sans-serif;
+     font-weight: normal;
+
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right,#00AAFF,#00FF6C);
+}
+.cal-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns:repeat(4,100px);
+    grid-template-rows: minmax(120px, auto) repeat(5,100px);
+}
+.cal-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+.cal-grid > button:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.span-two{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1/-1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .previous-operand{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+.output .current-operand{
+    color: rgba(255, 255, 255, 1);
+    font-size: 2.5rem;
+}
+@media screen and (max-width: 384px) {
+    .cal-grid{
+        grid-template-columns:repeat(4,90px);
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .cal-grid{
+        grid-template-columns:repeat(4,85px);
+    }
+  }
+  @media screen and (max-width: 340px) {
+    .cal-grid{
+        grid-template-columns:repeat(4,80px);
+        grid-template-rows: minmax(120px, auto) repeat(5,80px);
+
+    }
+  }
+  @media screen and (max-width: 318px) {
+    .cal-grid{
+        grid-template-columns:repeat(4,75px);
+    }
+  }
+  @media screen and (max-width: 300px) {
+    .cal-grid{
+        grid-template-columns:repeat(4,70px);
+    }
+  }
