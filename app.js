@@ -45,7 +45,7 @@ class Calculator{
                 break
             default:
                 return            
-        }
+        } 
         this.currentOperand = compute
         this.operation = undefined
         this.previousOperand = ''
